@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Availability Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .status-options {
+            display: none;
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+        }
+        .status-options.active {
+            display: block;
+        }
+        .status-indicator {
+            transition: all 0.3s ease;
+        }
+        .available {
+            color: #10B981;
+            font-weight: 600;
+        }
+        .not-available {
+            color: #EF4444;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen p-6">
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Availability Manager</h1>
+        
+        <!-- Main buttons grid -->
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-3 mb-10">
+            <!-- Generate 18 buttons -->
+            <script>
+                // Create buttons dynamically
+                document.write(
+                    Array.from({length: 18}, (_, i) => i + 1).map(num => ` 
+                    <div class="relative">
+                        <button 
+                            onclick="toggleOptions(${num})"
+                            ondblclick="resetStatus(${num})"
+                            class="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-200 shadow-sm"
+                            id="main-btn-${num}">
+                            ${num}
+                        </button>
+                        <div class="status-options mt-1" id="options-${num}">
+                            <div class="flex flex-col space-y-1">
+                                <button 
+                                    onclick="setStatus(${num}, 'available')"
+                                    class="w-full py-2 px-3 bg-green-500 hover:bg-green-600 text-white rounded-t-md text-sm">
+                                    Available
+                                </button>
+                                <button 
+                                    onclick="setStatus(${num}, 'not-available')"
+                                    class="w-full py-2 px-3 bg-red-500 hover:bg-red-600 text-white rounded-b-md text-sm">
+                                    Not Available
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    `).join('')
+                );
+            </script>
+        </div>
+        
+        <!-- Status display area -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700">Current Status</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                <!-- Generate 18 status indicators -->
+                <script>
+                    document.write(
+                        Array.from({length: 18}, (_, i) => i + 1).map(num => ` 
+                        <div class="flex items-center">
+                            <span class="font-medium text-gray-600 mr-2">${num}:</span>
+                            <span id="status-${num}" class="status-indicator">-</span>
+                        </div>
+                        `).join('')
+                    );
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Track currently open options
+        let currentOpenOptions = null;
+        
+        // Toggle visibility of status options
+        function toggleOptions(buttonNum) {
+            const options = document.getElementById(`options-${buttonNum}`);
+            
+            // Close previously opened options if different from current
+            if (currentOpenOptions && currentOpenOptions !== options) {
+                currentOpenOptions.classList.remove('active');
+            }
+            
+            // Toggle current options
+            options.classList.toggle('active');
+            currentOpenOptions = options.classList.contains('active') ? options : null;
+        }
+        
+        // Set the status for a specific button and update localStorage
+        function setStatus(buttonNum, status) {
+            const statusElement = document.getElementById(`status-${buttonNum}`);
+            const mainButton = document.getElementById(`main-btn-${buttonNum}`);
+            
+            // Update status text and styling
+            if (status === 'available') {
+                statusElement.textContent = 'Available';
+                statusElement.className = 'status-indicator available';
+            } else {
+                statusElement.textContent = 'Not Available';
+                statusElement.className = 'status-indicator not-available';
+            }
+            
+            // Update status in localStorage
+            localStorage.setItem(`car-${buttonNum}-status`, status);
+            
+            // Close the options
+            document.getElementById(`options-${buttonNum}`).classList.remove('active');
+            currentOpenOptions = null;
+            
+            // Visual feedback on main button
+            mainButton.classList.remove('bg-indigo-600', 'bg-green-500', 'bg-red-500');
+            
+            if (status === 'available') {
+                mainButton.classList.add('bg-green-500');
+            } else {
+                mainButton.classList.add('bg-red-500');
+            }
+            
+            // Reset to original color after 1 second
+            setTimeout(() => {
+                mainButton.classList.remove('bg-green-500', 'bg-red-500');
+                mainButton.classList.add('bg-indigo-600');
+            }, 1000);
+        }
+
+        // Reset the status to "-" when double-clicked
+        function resetStatus(buttonNum) {
+            const statusElement = document.getElementById(`status-${buttonNum}`);
+            statusElement.textContent = '-';
+            statusElement.className = 'status-indicator';
+            localStorage.setItem(`car-${buttonNum}-status`, '-');
+        }
+
+        // Load the saved status from localStorage when the page is loaded
+        window.onload = function() {
+            for (let i = 1; i <= 18; i++) {
+                const savedStatus = localStorage.getItem(`car-${i}-status`);
+                const statusElement = document.getElementById(`status-${i}`);
+                if (savedStatus === 'available') {
+                    statusElement.textContent = 'Available';
+                    statusElement.className = 'status-indicator available';
+                } else if (savedStatus === 'not-available') {
+                    statusElement.textContent = 'Not Available';
+                    statusElement.className = 'status-indicator not-available';
+                } else {
+                    statusElement.textContent = '-';
+                    statusElement.className = 'status-indicator';
+                }
+            }
+        };
+        
+        // Close options when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.relative') && currentOpenOptions) {
+                currentOpenOptions.classList.remove('active');
+                currentOpenOptions = null;
+            }
+        });
+    </script>
+    
+</body>
+</html>
