@@ -25,7 +25,7 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
-            height: 80vh;
+            height: 93vh;
         }
         
         .car-card:hover {
@@ -35,7 +35,6 @@
         
         .car-card {
             transition: all 0.3s ease;
-            height: 470px;
         }
         
         .color-chip {
@@ -49,10 +48,7 @@
         .p-6{
             margin-top: 85px;
         }
-        #google_translate_element{
-            height: 10px;
-            width: auto;
-        }
+
 
 
         /* Simple Hamburger button styling */
@@ -107,35 +103,47 @@
                     <i class="fas fa-car text-primary text-3xl mr-2"></i>
                     <span class="text-2xl font-bold text-primary">Rent a Car <span class="text-gray-800">Noari</span></span>
                 </div>
-                <div class="md:hidden">
-                    <button class="hamburger-button">
-                        <span class="block w-6 h-0.5 bg-black mb-1"></span>
-                        <span class="block w-6 h-0.5 bg-black mb-1"></span>
-                        <span class="block w-6 h-0.5 bg-black mb-1"></span>
-                    </button>
-                    <div class="menu hidden">
-                        <!-- Your nav links go here -->
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-primary font-medium">Home</a>
+                    <a href="#fleet" class="text-gray-800 hover:text-primary font-medium">Our Fleet</a>
+                    <a href="#services" class="text-gray-800 hover:text-primary font-medium">Services</a>
+                    <a href="#about" class="text-gray-800 hover:text-primary font-medium">About Us</a>
+                    <a href="#contact" class="text-gray-800 hover:text-primary font-medium">Contact</a>
+
                 </div>
-                
+                <div class="md:hidden">
+                    <button class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
-   
+    <div class="md:hidden">
+        <button class="hamburger-button">
+            <span class="block w-6 h-0.5 bg-black mb-1"></span>
+            <span class="block w-6 h-0.5 bg-black mb-1"></span>
+            <span class="block w-6 h-0.5 bg-black mb-1"></span>
+        </button>
+        <div class="menu hidden">
+            <!-- Your nav links go here -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="contact">Contact</a></li>
+
+            </ul>
+        </div>
+    </div>
     
 
     <!-- Hero Section -->
 
     <section id="home" class="hero flex items-center justify-center text-white">
         <div class="text-center px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Premium Car Rental Services</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Rent a car Noari</h1>
             <p class="text-xl md:text-2xl mb-8">Experience luxury and comfort with our diverse fleet of vehicles</p>
             <a href="#fleet" class="bg-primary hover:bg-primaryDark text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block">Explore Our Fleet</a>
         </div>
@@ -146,7 +154,7 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Fleet</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- VW Tiguan 2010 -->
+                <!-- AUDI A3 -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Audi A3.png">
@@ -167,7 +175,7 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
@@ -193,10 +201,10 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
-                </div><!-- VW Tiguan 2010 -->
+                </div><!-- Golf 7 caravan -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 7 caravan.png">
@@ -204,7 +212,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Golf 7 caravan</h3>
                         <div class="flex items-center mb-3">
-                            <span class="color-chip bg-black"></span>
+                            <span class="color-chip bg-white"></span>
                             <span class="text-gray-600">White</span>
                         </div>
                         <div class="flex justify-between items-center mb-4">
@@ -217,12 +225,12 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- VW Tiguan 2010 -->
+                <!-- Golf 7 black -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 7 black.png">
@@ -243,10 +251,10 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
-                </div><!-- VW Tiguan 2010 -->
+                </div><!-- Golf 7 black -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 7 black.png">
@@ -267,12 +275,12 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- VW Tiguan 2010 -->
+                <!-- Golf 7 black -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 7 black.png">
@@ -293,10 +301,10 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
-                </div><!-- VW Tiguan 2010 -->
+                </div><!-- Golf 7 white -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 7 white.png">
@@ -304,7 +312,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Golf 7</h3>
                         <div class="flex items-center mb-3">
-                            <span class="color-chip bg-black"></span>
+                            <span class="color-chip bg-white"></span>
                             <span class="text-gray-600">White</span>
                         </div>
                         <div class="flex justify-between items-center mb-4">
@@ -317,10 +325,10 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
-                </div><!-- VW Tiguan 2010 -->
+                </div><!-- Golf 7 white -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 7 white.png">
@@ -328,7 +336,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Golf 7</h3>
                         <div class="flex items-center mb-3">
-                            <span class="color-chip bg-black"></span>
+                            <span class="color-chip bg-white"></span>
                             <span class="text-gray-600">White</span>
                         </div>
                         <div class="flex justify-between items-center mb-4">
@@ -341,10 +349,10 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
-                </div><!-- VW Tiguan 2010 -->
+                </div><!-- "Golf 7 white -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 7 white.png">
@@ -352,7 +360,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Golf 7</h3>
                         <div class="flex items-center mb-3">
-                            <span class="color-chip bg-black"></span>
+                            <span class="color-chip bg-white"></span>
                             <span class="text-gray-600">White</span>
                         </div>
                         <div class="flex justify-between items-center mb-4">
@@ -365,10 +373,10 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
-                </div><!-- VW Tiguan 2010 -->
+                </div><!-- "Golf 7 blue -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 7 blue.png">
@@ -376,7 +384,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Golf 7</h3>
                         <div class="flex items-center mb-3">
-                            <span class="color-chip bg-black"></span>
+                            <span class="color-chip bg-blue-600"></span>
                             <span class="text-gray-600">Blue</span>
                         </div>
                         <div class="flex justify-between items-center mb-4">
@@ -389,12 +397,12 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Audi A3 -->
+                <!-- Golf 6 silver -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 6 silver.png">
@@ -402,7 +410,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Golf 6</h3>
                         <div class="flex items-center mb-3">
-                            <span class="color-chip bg-black"></span>
+                            <span class="color-chip bg-gray-300"></span>
                             <span class="text-gray-600">Silver</span>
                         </div>
                         <div class="flex justify-between items-center mb-4">
@@ -415,38 +423,12 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">25eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Golf 6 Black -->
-                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
-                    <div class="h-48 bg-gray-200 flex items-center justify-center">
-                        <img src="Golf 6 silver.png">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Golf 6</h3>
-                        <div class="flex items-center mb-3">
-                            <span class="color-chip bg-black"></span>
-                            <span class="text-gray-600">Silver</span>
-                        </div>
-                        <div class="flex justify-between items-center mb-4">
-                            <div>
-                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
-                            </div>
-                            <div>
-                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-2xl font-bold text-primary">$25/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Golf 6 Silver -->
+                <!-- Golf 6 silver -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 6 silver.png">
@@ -467,12 +449,38 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">$25/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Golf 7 White Caravan -->
+                <!-- Golf 6 silver -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 6 silver.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 6</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-gray-300"></span>
+                            <span class="text-gray-600">Silver</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$25/day</span>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golf 7.5 teget -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="Golf 7.5 teget.png">
@@ -493,12 +501,12 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">30eur/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Golf 7 Blue -->
+                <!-- Golf 7 HIMT -->
                 <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
                     <div class="h-48 bg-gray-200 flex items-center justify-center">
                         <img src="HIMT.png">
@@ -506,8 +514,8 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Golf 7</h3>
                         <div class="flex items-center mb-3">
-                            <span class="color-chip bg-blue-600"></span>
-                            <span class="text-gray-600">Blue</span>
+                            <span class="color-chip bg-gray-300"></span>
+                            <span class="text-gray-600">Gray</span>
                         </div>
                         <div class="flex justify-between items-center mb-4">
                             <div>
@@ -519,7 +527,7 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">$30/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
@@ -551,7 +559,7 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">$30/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
@@ -564,8 +572,8 @@
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Golf 7</h3>
                         <div class="flex items-center mb-3">
-                            <span class="color-chip bg-black"></span>
-                            <span class="text-gray-600">Black</span>
+                            <span class="color-chip bg-white border border-gray-300"></span>
+                            <span class="text-gray-600">Light Black</span>
                         </div>
                         <div class="flex justify-between items-center mb-4">
                             <div>
@@ -577,7 +585,7 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">$30/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
@@ -603,7 +611,7 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-2xl font-bold text-primary">$25/day</span>
-                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+<a href="tel:+38349866200" class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</a>
                         </div>
                     </div>
                 </div>
@@ -673,7 +681,7 @@
                         </div>
                         <div>
                             <h4 class="font-bold text-gray-800">Address</h4>
-                            <p class="text-gray-600">RR.nene tereza</p>
+                            <p class="text-gray-600">RR.nene tereza Fushe Kosove</p>
                         </div>
                     </div>
                     
@@ -734,15 +742,9 @@
             </div>
         </div>
     </footer>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,sq,it,de,fr', // Add or remove languages as needed
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-    </script>
+
+
+  
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -756,7 +758,6 @@
 </script>
 
 
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     
     <script>
         // Show more cars functionality
