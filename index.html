@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Car Noari - Premium Car Rental Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF7F00',
+                        primaryDark: '#E67300',
+                        primaryLight: '#FFA040'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+        
+        .car-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .car-card {
+            transition: all 0.3s ease;
+            height: 470px;
+        }
+        
+        .color-chip {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+        }
+        .p-6{
+            margin-top: 85px;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-car text-primary text-3xl mr-2"></i>
+                    <span class="text-2xl font-bold text-primary">Rent a Car <span class="text-gray-800">Noari</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-primary font-medium">Home</a>
+                    <a href="#fleet" class="text-gray-800 hover:text-primary font-medium">Our Fleet</a>
+                    <a href="#services" class="text-gray-800 hover:text-primary font-medium">Services</a>
+                    <a href="#about" class="text-gray-800 hover:text-primary font-medium">About Us</a>
+                    <a href="#contact" class="text-gray-800 hover:text-primary font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Premium Car Rental Services</h1>
+            <p class="text-xl md:text-2xl mb-8">Experience luxury and comfort with our diverse fleet of vehicles</p>
+            <a href="#fleet" class="bg-primary hover:bg-primaryDark text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block">Explore Our Fleet</a>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Fleet</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- VW Tiguan 2010 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Audi A3.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Audi A3</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">Black</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VW Tiguan 2010 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="VW TIGUAN 2010.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">VW Tiguan 2010</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">Black</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div><!-- VW Tiguan 2010 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 7 caravan.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7 caravan</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">White</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VW Tiguan 2010 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 7 black.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">Black</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div><!-- VW Tiguan 2010 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 7 black.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">Black</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- VW Tiguan 2010 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 7 black.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">Black</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div><!-- VW Tiguan 2010 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 7 white.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">White</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div><!-- VW Tiguan 2010 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 7 white.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">White</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div><!-- VW Tiguan 2010 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 7 white.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">White</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div><!-- VW Tiguan 2010 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 7 blue.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">Blue</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audi A3 -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 6 silver.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 6</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">Silver</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">25eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golf 6 Black -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 6 silver.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 6</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">Silver</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$25/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golf 6 Silver -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 6 silver.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 6</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-gray-300"></span>
+                            <span class="text-gray-600">Silver</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$25/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golf 7 White Caravan -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="Golf 7.5 teget.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7 </h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-white border border-gray-300"></span>
+                            <span class="text-gray-600">Light Black</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">30eur/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golf 7 Blue -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="HIMT.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-blue-600"></span>
+                            <span class="text-gray-600">Blue</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$30/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button id="showMoreBtn" class="bg-primary hover:bg-primaryDark text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block">Show More Vehicles</button>
+            </div>
+
+            <!-- Hidden cars that will be shown when clicking "Show More" -->
+            <div id="moreCars" class="hidden mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    
+                    <img src="Golf 7 white.png" alt="" srcset="">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-white border border-gray-300"></span>
+                            <span class="text-gray-600">White</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$30/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Golf 7s (6 black) -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+            
+                    <img src="Golf 7 black.png" alt="" srcset="">
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 7</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">Black</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$30/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Golf 6 Black -->
+                <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="ChatGPT Image May 9, 2025, 05_46_59 AM.png">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Golf 6</h3>
+                        <div class="flex items-center mb-3">
+                            <span class="color-chip bg-black"></span>
+                            <span class="text-gray-600">Black</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-users mr-2"></i>5 seats</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600"><i class="fas fa-gas-pump mr-2"></i>Petrol</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-primary">$25/day</span>
+                            <button class="bg-primary hover:bg-primaryDark text-white py-2 px-4 rounded transition duration-300">Rent Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg bg-gray-50 hover:shadow-lg transition duration-300">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-car text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Flexible Rental Periods</h3>
+                    <p class="text-gray-600">Rent by the day, week, or month with flexible terms to suit your needs.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-gray-50 hover:shadow-lg transition duration-300">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Full Insurance Coverage</h3>
+                    <p class="text-gray-600">Comprehensive insurance included with every rental for your peace of mind.</p>
+                </div>
+                <div class="text-center p-6 rounded-lg bg-gray-50 hover:shadow-lg transition duration-300">
+                    <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Customer Support</h3>
+                    <p class="text-gray-600">Our team is available around the clock to assist you with any questions or issues.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">About Rent a Car Noari</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2010, Rent a Car Noari has been providing premium car rental services to customers across the region. With our diverse fleet of varies of vehicles, we cater to all your transportation needs.</p>
+                    <p class="text-gray-600 mb-4">Our mission is to deliver exceptional service, reliable vehicles, and competitive pricing to ensure your complete satisfaction.</p>
+                    <p class="text-gray-600">All our vehicles undergo regular maintenance and inspections to guarantee safety and performance.</p>
+                </div>
+                <div class="md:w-1/2">
+                <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Get in Touch</h3>
+                    <p class="text-gray-600 mb-6">Have questions about our services or fleet? Reach out to us using the contact information below or fill out the form.</p>
+                    
+                    <div class="mb-4 flex items-start">
+                        <div class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Address</h4>
+                            <p class="text-gray-600">RR.nene tereza</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4 flex items-start">
+                        <div class="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Phone</h4>
+                            <p class="text-gray-600">+38349866200</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4 flex items-start">
+                    </div>
+                </div>
+                
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-car text-primary text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Rent a Car <span class="text-primary">Noari</span></span>
+                    </div>
+                    <p class="text-gray-400">Premium car rental services since 2010.</p>
+                </div>
+                
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul>
+                        <li class="mb-2"><a href="#home" class="text-gray-400 hover:text-primary transition duration-300">Home</a></li>
+                        <li class="mb-2"><a href="#fleet" class="text-gray-400 hover:text-primary transition duration-300">Our Fleet</a></li>
+                        <li class="mb-2"><a href="#services" class="text-gray-400 hover:text-primary transition duration-300">Services</a></li>
+                        <li class="mb-2"><a href="#about" class="text-gray-400 hover:text-primary transition duration-300">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href=https://www.facebook.com/RentalCarNoari/ class="bg-gray-700 hover:bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/rentacarnoari/" class="bg-gray-700 hover:bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2010 Rent a Car Noari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Show more cars functionality
+        document.getElementById('showMoreBtn').addEventListener('click', function() {
+            const moreCars = document.getElementById('moreCars');
+            const btn = document.getElementById('showMoreBtn');
+            
+            if (moreCars.classList.contains('hidden')) {
+                moreCars.classList.remove('hidden');
+                btn.textContent = 'Show Less';
+            } else {
+                moreCars.classList.add('hidden');
+                btn.textContent = 'Show More Vehicles';
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html
