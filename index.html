@@ -83,6 +83,24 @@
         </div>
     </nav>
 
+    <div class="md:hidden">
+        <button class="hamburger-button">
+            <span class="block w-6 h-0.5 bg-black mb-1"></span>
+            <span class="block w-6 h-0.5 bg-black mb-1"></span>
+            <span class="block w-6 h-0.5 bg-black mb-1"></span>
+        </button>
+        <div class="menu hidden">
+            <!-- Your nav links go here -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+
     <!-- Hero Section -->
 
     <section id="home" class="hero flex items-center justify-center text-white">
@@ -733,6 +751,17 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.hamburger-button');
+            const menu = document.querySelector('.menu');
+    
+            menuButton.addEventListener('click', function() {
+                menu.classList.toggle('hidden');
             });
         });
     </script>
