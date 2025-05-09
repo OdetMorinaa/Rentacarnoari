@@ -895,5 +895,40 @@ function setStatus(carNumber, status) {
         window.onload = loadCarStatuses;
     </script>
     
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBSu7OJrgbThNezGxQvwDP2_wkHxky31GA",
+    authDomain: "rentacarnoari.firebaseapp.com",
+    projectId: "rentacarnoari",
+    storageBucket: "rentacarnoari.firebasestorage.app",
+    messagingSenderId: "72038393514",
+    appId: "1:72038393514:web:c88edd7b45b33f982bd2d3",
+    measurementId: "G-T5BBVZ7SND"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  for (let i = 1; i <= 18; i++) {
+    const statusEl = document.getElementById(`status-${i}`);
+    const carDoc = doc(db, "cars", `car-${i}`);
+    
+    onSnapshot(carDoc, (docSnap) => {
+      if (docSnap.exists()) {
+        const data = docSnap.data();
+        statusEl.textContent = data.status === "available" ? "Available" : "Not Available";
+        statusEl.className = `status-indicator ${data.status === "available" ? "available" : "not-available"}`;
+      } else {
+        statusEl.textContent = "-";
+        statusEl.className = "status-indicator";
+      }
+    });
+  }
+</script>
+
+
 </body>
 </html
