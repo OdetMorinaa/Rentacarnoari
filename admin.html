@@ -176,5 +176,33 @@
         });
     </script>
     
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBSu7OJrgbThNezGxQvwDP2_wkHxky31GA",
+    authDomain: "rentacarnoari.firebaseapp.com",
+    projectId: "rentacarnoari",
+    storageBucket: "rentacarnoari.firebasestorage.app",
+    messagingSenderId: "72038393514",
+    appId: "1:72038393514:web:c88edd7b45b33f982bd2d3",
+    measurementId: "G-T5BBVZ7SND"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  async function setStatus(carId, status) {
+    await setDoc(doc(db, "cars", `car-${carId}`), {
+      status: status
+    });
+    console.log(`Car ${carId} set to ${status}`);
+  }
+</script>
+
+
+
+    
 </body>
 </html>
