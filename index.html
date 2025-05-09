@@ -53,6 +53,48 @@
             height: 10px;
             width: auto;
         }
+
+
+        /* Simple Hamburger button styling */
+.hamburger-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-button span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+}
+
+/* Menu Hidden by default */
+.menu {
+    display: none;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 10px 0;
+}
+
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+}
+
     </style>
 </head>
 <body class="font-sans">
@@ -65,40 +107,28 @@
                     <i class="fas fa-car text-primary text-3xl mr-2"></i>
                     <span class="text-2xl font-bold text-primary">Rent a Car <span class="text-gray-800">Noari</span></span>
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-800 hover:text-primary font-medium">Home</a>
-                    <a href="#fleet" class="text-gray-800 hover:text-primary font-medium">Our Fleet</a>
-                    <a href="#services" class="text-gray-800 hover:text-primary font-medium">Services</a>
-                    <a href="#about" class="text-gray-800 hover:text-primary font-medium">About Us</a>
-                    <a href="#contact" class="text-gray-800 hover:text-primary font-medium">Contact</a>
-                    <div id="google_translate_element"></div>
-
-                </div>
                 <div class="md:hidden">
-                    <button class="text-gray-800 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button class="hamburger-button">
+                        <span class="block w-6 h-0.5 bg-black mb-1"></span>
+                        <span class="block w-6 h-0.5 bg-black mb-1"></span>
+                        <span class="block w-6 h-0.5 bg-black mb-1"></span>
                     </button>
+                    <div class="menu hidden">
+                        <!-- Your nav links go here -->
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </nav>
 
-    <div class="md:hidden">
-        <button class="hamburger-button">
-            <span class="block w-6 h-0.5 bg-black mb-1"></span>
-            <span class="block w-6 h-0.5 bg-black mb-1"></span>
-            <span class="block w-6 h-0.5 bg-black mb-1"></span>
-        </button>
-        <div class="menu hidden">
-            <!-- Your nav links go here -->
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </div>
+   
     
 
     <!-- Hero Section -->
